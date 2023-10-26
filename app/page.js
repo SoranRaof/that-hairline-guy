@@ -1,10 +1,10 @@
-import Slider from "./Components/Slider";
+import Gallery from "./Components/Gallery";
 
 export default function Home() {
   return (
     <main className="">
-      <div>
-        <Slider />
+      <div className="">
+        <Gallery />
       </div>
     </main>
   );

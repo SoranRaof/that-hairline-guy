@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import client3before from "../../public/client3before.png";
-import client3after from "../../public/client3after.png";
 
-const Slider = () => {
+const Slider = ({ clientAfter, clientBefore }) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -33,13 +31,26 @@ const Slider = () => {
         onMouseMove={handleMove}
         onMouseDown={handleMouseDown}
       >
-        <Image alt="" fill priority src={client3after} />
-
+        <Image
+          alt="client-after"
+          sizes="auto"
+          fill
+          priority
+          src={clientAfter}
+        />
+        ;
         <div
           className="absolute top-0 left-0 right-0 w-full max-w-[700px] aspect-[70/45] m-auto overflow-hidden select-none"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
-          <Image fill priority alt="" src={client3before} />
+          <Image
+            alt="client-before"
+            sizes="auto"
+            fill
+            priority
+            src={clientBefore}
+          />
+          ;
         </div>
         <div
           className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"
