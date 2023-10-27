@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  env: {
+    FORMEEZYURL: process.env.FORMEEZYURL,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -23,7 +23,10 @@ const Nav = () => {
             <a className="flex items-center gap-1 cursor-pointer">
               <li className="text-lg font-medium">About</li>
             </a>
-            <a className="flex items-center gap-1 cursor-pointer">
+            <a
+              href="/contact"
+              className="flex items-center gap-1 cursor-pointer"
+            >
               <li className="text-lg font-medium">Contact</li>
             </a>
           </ul>
@@ -61,7 +64,7 @@ const Nav = () => {
           <a href="#" className="">
             About
           </a>
-          <a href="#" className="">
+          <a href="/contact" className="">
             Contact
           </a>
         </div>

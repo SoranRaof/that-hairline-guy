@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <Nav />
-        <div className="">{children}</div>
+        <div className="min-h-screen">{children}</div>
         <Footer className="fixed bottom-0" />
       </body>
     </html>

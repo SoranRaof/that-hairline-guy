@@ -1,3 +1,4 @@
+import Contact from "./contact/page";
 import Gallery from "./Components/Gallery";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <main className="">
       <div className="">
         <Gallery />
+        <Contact />
       </div>
     </main>
   );
