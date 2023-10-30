@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BiLogoInstagram, BiLogoFacebook } from "react-icons/bi";
 
@@ -53,22 +54,31 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className=" grid grid-rows-4 justify-center items-center gap-y-2 py-2 md:hidden">
-          <a href="#" className="">
-            Booking
-          </a>
-          <a href="#" className="">
-            Gallery
-          </a>
-          <a href="#" className="">
-            About
-          </a>
-          <a href="/contact" className="">
-            Contact
-          </a>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="overflow-hidden"
+          >
+            <div className=" grid grid-rows-4 justify-center items-center gap-y-2 py-2 md:hidden">
+              <a href="#" className="">
+                Booking
+              </a>
+              <a href="#" className="">
+                Gallery
+              </a>
+              <a href="#" className="">
+                About
+              </a>
+              <a href="/contact" className="">
+                Contact
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
