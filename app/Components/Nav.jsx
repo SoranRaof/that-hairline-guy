@@ -21,7 +21,7 @@ const Nav = () => {
               <li className="text-lg font-medium">Gallery</li>
             </a>
             <a className="flex items-center gap-1 cursor-pointer">
-              <li className="text-lg font-medium">About</li>
+              <li className="text-lg font-medium">FAQS</li>
             </a>
             <a
               href="/contact"
