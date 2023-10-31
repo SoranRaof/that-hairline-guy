@@ -1,11 +1,11 @@
-import Accordion from "../Components/Accordion";
+import FaqAccordion from "../Components/FaqAccordion";
 import faqsArr from "@/utils/FaqsArr";
 
 const page = () => {
   return (
     <div>
       {faqsArr.map((faq, index) => (
-        <Accordion
+        <FaqAccordion
           key={`faq${index}`}
           question={faq.question}
           answer={faq.answer}

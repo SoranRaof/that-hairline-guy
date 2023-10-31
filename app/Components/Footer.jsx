@@ -15,10 +15,10 @@ const Footer = () => {
         <p className="text-lg">Leeds</p>
       </div>
       <div className="flex flex-col justify-center items-center gap-1">
-        <a>Booking</a>
-        <a>Gallery</a>
-        <a>About</a>
-        <a>Contact</a>
+        <a>BOOKING</a>
+        <a>SERVICES</a>
+        <a>FAQS</a>
+        <a>CONTACT</a>
       </div>
       <div className="flex flex-col justify-center items-center gap-2 md:gap-4">
         <p className="text-lg">LOGO</p>

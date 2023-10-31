@@ -10,25 +10,27 @@ const Nav = () => {
   return (
     <div className="">
       <div className="flex justify-between w-full h-16 px-4 items-center">
-        <div className="">
+        <a href="/">
           <h1 className="text-2xl font-bold">Logo</h1>
-        </div>
+        </a>
         <div className="hidden md:block">
           <ul className="flex gap-4">
-            <a className="flex items-center cursor-pointer">
-              <li className="text-lg font-medium">Booking</li>
+            <a href="/treatment" className="flex items-center cursor-pointer">
+              <li className="text-lg font-medium">TREATMENT</li>
             </a>
             <a className="flex items-center gap-1 cursor-pointer">
-              <li className="text-lg font-medium">Gallery</li>
+              <li className="text-lg font-medium">ABOUT</li>
             </a>
-            <a className="flex items-center gap-1 cursor-pointer">
+            <a href="/faqs" className="flex items-center gap-1 cursor-pointer">
               <li className="text-lg font-medium">FAQS</li>
             </a>
             <a
               href="/contact"
               className="flex items-center gap-1 cursor-pointer"
             >
-              <li className="text-lg font-medium">Contact</li>
+              <li href="/contact" className="text-lg font-medium">
+                CONTACT
+              </li>
             </a>
           </ul>
         </div>
@@ -64,16 +66,16 @@ const Nav = () => {
           >
             <div className=" grid grid-rows-4 justify-center items-center gap-y-2 py-2 md:hidden">
               <a href="#" className="">
-                Booking
+                BOOKING
               </a>
               <a href="#" className="">
-                Gallery
+                SERVICES
               </a>
-              <a href="#" className="">
-                About
+              <a href="/faqs" className="">
+                FAQS
               </a>
               <a href="/contact" className="">
-                Contact
+                CONTACT
               </a>
             </div>
           </motion.div>
