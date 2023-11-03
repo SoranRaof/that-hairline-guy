@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
-const TreatmentAccordion = ({ description, process, prices, index }) => {
+const TreatmentAccordion = ({ description, process, prices }) => {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   const handleClick = (description, process, prices) => {

@@ -1,8 +1,10 @@
 import "./globals.css";
-import roboto from "./Styles/fonts";
+import { League_Spartan } from "next/font/google";
 
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
+
+const leagueSpartan = League_Spartan({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={leagueSpartan.className}>
         <Nav />
         <div className="min-h-screen">{children}</div>
         <Footer className="fixed bottom-0" />

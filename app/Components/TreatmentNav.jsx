@@ -12,10 +12,10 @@ const TreatmentNav = () => {
 
   return (
     <div className="">
-      <div className="flex items-center justify-center gap-2 outline">
+      <div className="h-auto w-full flex items-center justify-center outline px-10">
         {treatmentArr.map((treatment, index) => (
           <button key={index} onClick={() => handleClick(treatment)}>
-            <p>{treatment.treatment}</p>
+            <p className="font-bold">{treatment.treatment}</p>
           </button>
         ))}
       </div>

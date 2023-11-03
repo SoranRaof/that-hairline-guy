@@ -12,3 +12,16 @@
     @apply font-bold;
   }
 }
+
+@layer components {
+  .btn-hover {
+    @apply relative;
+  }
+  .btn-hover::before {
+    @apply absolute block w-full h-[2px] bottom-0 left-0 bg-sage scale-x-0 origin-top-left transition ease-in-out duration-300;
+    content: "";
+  }
+  .btn-hover:hover::before {
+    @apply scale-x-100;
+  }
+}
