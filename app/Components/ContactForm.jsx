@@ -38,9 +38,9 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="mx-auto max-w-2xl px-4 my-10 rounded-lg shadow-lg p-4">
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col my-4 w-full">
+    <div className="p-4 rounded-lg shadow-lg">
+      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <div className="flex flex-col w-full">
           <label className="text-md font-bold" htmlFor="firstName">
             First name
           </label>
@@ -56,7 +56,7 @@ const ContactForm = () => {
             required
           />
         </div>
-        <div className="flex flex-col my-4 w-full">
+        <div className="flex flex-col w-full">
           <label className="text-md font-bold" htmlFor="lastName">
             Last name
           </label>
@@ -72,7 +72,7 @@ const ContactForm = () => {
             required
           />
         </div>
-        <div className="flex flex-col my-4 w-full">
+        <div className="flex flex-col w-full">
           <label className="text-md font-bold" htmlFor="email">
             Email
           </label>
@@ -87,7 +87,7 @@ const ContactForm = () => {
             maxLength={50}
           />
         </div>
-        <div className="flex flex-col my-4 w-full">
+        <div className="flex flex-col w-full">
           <label className="text-md font-bold" htmlFor="phone">
             Phone
           </label>
@@ -101,7 +101,7 @@ const ContactForm = () => {
             required
           />
         </div>
-        <div className="flex flex-col my-4 w-full">
+        <div className="flex flex-col w-full">
           <label className="text-md font-bold" htmlFor="message">
             Message
           </label>
@@ -122,7 +122,7 @@ const ContactForm = () => {
             Preferred contact:
           </label>
           <select
-            className="p-3 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
+            className="p-4 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
             name="preference"
             onChange={handleInput}
             value={formInput.preference}
@@ -136,7 +136,7 @@ const ContactForm = () => {
           </select>
         </div>
         <button
-          className="rounded text-lg text-white bg-sage w-full p-4 my-2"
+          className="rounded text-lg text-white bg-sage w-full p-4"
           type="submit"
         >
           Send
