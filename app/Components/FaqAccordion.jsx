@@ -1,29 +1,26 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
-const FaqAccordion = ({ question, answer, index }) => {
+const FaqAccordion = ({ question, answer, active, index }) => {
   const [activeQuestion, setActiveQuestion] = useState(null);
-  const handleClick = (question) => {
-    if (activeQuestion === question) {
-      // If the clicked accordion is already open, close it
-      setActiveQuestion(null);
-    } else {
-      // If a different accordion is clicked, open it and close the previously open one
+
+  useEffect(() => {
+    console.log("useeffect");
+    if (active === index) {
       setActiveQuestion(question);
+    } else {
+      setActiveQuestion(null);
     }
-  };
+  }, [active]);
 
   return (
-    <div className="w-screen flex justify-center items-center mb-4">
-      <div className="w-1/2 max-w-xl shadow-md rounded-lg p-4">
-        <div className="flex flex-row justify-between items-center">
+    <div className="flex justify-center items-center mb-4 outline">
+      <div className="w-full md:w-1/2 max-w-xl shadow-md rounded-lg p-4">
+        <div className="flex flex-row justify-between items-center h-[20vh] md:h-[10vh]">
           <h2 className="text-2xl font-bold">{question}</h2>
-          <button
-            className="focus:outline-none"
-            onClick={() => handleClick(question)}
-          >
+          <button className="focus:outline-none">
             {activeQuestion === question ? (
               <BsChevronUp className="text-3xl" />
             ) : (

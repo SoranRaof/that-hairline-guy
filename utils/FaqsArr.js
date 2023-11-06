@@ -40,7 +40,7 @@ const faqsArr = [
     id: 7,
     question: "Will the pigment ever change colour?",
     answer:
-      "No, this is a specially formulated carbon-based pigment used only for Scalp Micropigmentation. IT CAN NOT CHANGE COLOUR because the pigment does not have any constituent colours in it.",
+      "No, this is a specially formulated carbon-based pigment used only for Scalp Micropigmentation. It cannot change colour because the pigment does not have any constituent colours in it.",
   },
   {
     id: 8,

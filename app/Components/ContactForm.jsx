@@ -38,8 +38,26 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="p-4 rounded-lg shadow-lg">
+    <div className="p-4 rounded-lg h-full">
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <div className="flex flex-col w-fit">
+          <label className="text-md font-bold" htmlFor="preference">
+            Preferred contact:
+          </label>
+          <select
+            className="p-4 rounded-lg border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
+            name="preference"
+            onChange={handleInput}
+            value={formInput.preference}
+            required
+          >
+            <option value="" disabled>
+              Choose an option
+            </option>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+          </select>
+        </div>
         <div className="flex flex-col w-full">
           <label className="text-md font-bold" htmlFor="firstName">
             First name
@@ -61,7 +79,7 @@ const ContactForm = () => {
             Last name
           </label>
           <input
-            className="p-4 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
+            className="p-4 rounded-lg border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
             name="lastName"
             type="lastName"
             placeholder="Last name"
@@ -77,7 +95,7 @@ const ContactForm = () => {
             Email
           </label>
           <input
-            className="p-4 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
+            className="p-4 rounded-lg border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
             name="email"
             type="email"
             placeholder="Email"
@@ -92,7 +110,7 @@ const ContactForm = () => {
             Phone
           </label>
           <input
-            className="p-4 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
+            className="p-4 rounded-lg border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
             name="phone"
             type="phone"
             placeholder="Phone"
@@ -109,7 +127,7 @@ const ContactForm = () => {
             rows={4}
             minLength={5}
             maxLength={500}
-            className="p-4 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
+            className="p-4 rounded-lg border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
             name="message"
             placeholder="Message"
             onChange={handleInput}
@@ -117,26 +135,8 @@ const ContactForm = () => {
             required
           />
         </div>
-        <div className="flex flex-col w-fit">
-          <label className="text-md font-bold" htmlFor="preference">
-            Preferred contact:
-          </label>
-          <select
-            className="p-4 rounded border-2 bg-gray-50 focus:border-sage focus:border-2 focus:outline-none"
-            name="preference"
-            onChange={handleInput}
-            value={formInput.preference}
-            required
-          >
-            <option value="" disabled>
-              Choose an option
-            </option>
-            <option value="phone">Phone</option>
-            <option value="email">Email</option>
-          </select>
-        </div>
         <button
-          className="rounded text-lg text-white bg-sage w-full p-4"
+          className="rounded-lg text-lg text-white bg-sage hover:bg-[#515853c8] w-full p-4"
           type="submit"
         >
           Send

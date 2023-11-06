@@ -10,9 +10,9 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div>
       <div
-        className={`flex justify-between w-full h-20 px-4 items-center ${
+        className={`flex justify-between h-20 px-4 items-center ${
           isOpen ? "" : "shadow-xl"
         }`}
       >
