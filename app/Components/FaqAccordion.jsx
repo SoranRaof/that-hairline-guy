@@ -16,9 +16,9 @@ const FaqAccordion = ({ question, answer, active, index }) => {
   }, [active]);
 
   return (
-    <div className="flex justify-center items-center mb-4 outline">
-      <div className="w-full md:w-1/2 max-w-xl shadow-md rounded-lg p-4">
-        <div className="flex flex-row justify-between items-center h-[20vh] md:h-[10vh]">
+    <div className="w-full flex items-center justify-center mb-4">
+      <div className="w-full max-w-xl shadow-md rounded-lg p-4">
+        <div className="flex flex-row justify-between items-center">
           <h2 className="text-2xl font-bold">{question}</h2>
           <button className="focus:outline-none">
             {activeQuestion === question ? (

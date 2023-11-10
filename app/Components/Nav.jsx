@@ -5,14 +5,22 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BiLogoInstagram, BiLogoFacebook } from "react-icons/bi";
 import Image from "next/image";
 import Logo from "../../public/TheHairlineGuyGreenNoBackground.png";
+import BackgroundImage from "../../public/header-background.png";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
+      <Image
+        alt="Logo"
+        src={BackgroundImage}
+        width={1200}
+        height={100}
+        className="w-full block md:hidden"
+      />
       <div
-        className={`flex justify-between h-20 px-4 items-center ${
+        className={`flex justify-between md:justify-around h-20 px-4 items-center ${
           isOpen ? "" : "shadow-xl"
         }`}
       >

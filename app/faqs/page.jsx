@@ -1,10 +1,7 @@
 "use client";
 import FaqAccordion from "../Components/FaqAccordion";
 import faqsArr from "@/utils/FaqsArr";
-import Slider from "react-slick";
 import { useRef, useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const page = () => {
   const [activeFaq, setActiveFaq] = useState("0");
@@ -15,34 +12,33 @@ const page = () => {
       setActiveFaq("0");
     }
   };
-  const sliderRef = useRef(null);
+  // const sliderRef = useRef(null);
 
-  const settings = {
-    className: "center",
-    centerMode: false,
-    infinite: false,
-    centerPadding: "0px",
-    slidesToShow: 1,
-    speed: 500,
-    rows: 1,
-    slidesPerRow: 4,
-  };
+  // const settings = {
+  //   className: "center",
+  //   centerMode: false,
+  //   infinite: false,
+  //   centerPadding: "0px",
+  //   slidesToShow: 1,
+  //   speed: 500,
+  //   rows: 1,
+  //   slidesPerRow: 4,
+  // };
 
-  const handlePrevClick = () => {
-    sliderRef.current.slickPrev();
-  };
+  // const handlePrevClick = () => {
+  //   sliderRef.current.slickPrev();
+  // };
 
-  const handleNextClick = () => {
-    sliderRef.current.slickNext();
-  };
+  // const handleNextClick = () => {
+  //   sliderRef.current.slickNext();
+  // };
 
   return (
-    <div className="my-20 md:mx-10 lg:mx-32 w-screen">
-      <div className="flex items-center justify-center">
-        <h1 className="text-5xl underline p-4 text-sage">FAQs</h1>
-      </div>
-      <div className="">
-        <Slider {...settings} ref={sliderRef}>
+    <div className="w-full my-10 lg:px-32">
+      <h1 className="text-5xl underline p-4 text-sage">FAQs</h1>
+      <div className="grid grid-cols-3 items-center justify-center">
+        <div className="col-span-2 flex items-center justify-center"></div>
+        <div className="col-span-1 max-h-[500px] w-full overflow-auto">
           {faqsArr.map((faq, index) => (
             <div onClick={() => handleSelectFaqs(index)}>
               <FaqAccordion
@@ -54,20 +50,6 @@ const page = () => {
               />
             </div>
           ))}
-        </Slider>
-        <div className="flex justify-center mt-2">
-          <button
-            className="bg-sage hover:bg-[#515853c8] text-white font-bold py-2 px-4 rounded-l-lg"
-            onClick={handlePrevClick}
-          >
-            Prev
-          </button>
-          <button
-            className="bg-sage hover:bg-[#515853c8] text-white font-bold py-2 px-4 rounded-r-lg"
-            onClick={handleNextClick}
-          >
-            Next
-          </button>
         </div>
       </div>
     </div>

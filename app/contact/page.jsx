@@ -3,11 +3,19 @@ import Image from "next/image";
 import JakClinic from "../../public/JakClinic.jpg";
 import Logo from "../../public/TheHairlineGuyGreenNoBackground.png";
 import { MdLocationPin, MdPhone } from "react-icons/md";
+import BackgroundImage from "../../public/header-background.png";
 
 const Contact = () => {
   return (
-    <div className="my-10 md:mx-10 lg:mx-32">
-      <h1 className="text-5xl underline p-4 text-sage">CONTACT</h1>
+    <div className="mb-20 my-10 md:mx-10 lg:mx-56">
+      <Image
+        alt="Logo"
+        src={BackgroundImage}
+        width={1200}
+        height={50}
+        className="hidden md:block w-full md:rounded-t-lg"
+      />
+      <h1 className="text-5xl px-4 text-sage">CONTACT</h1>
       <div className="md:grid grid-cols-2 lg:grid-cols-3 justify-center gap-2">
         <div className="col-span-1 w-full p-4 rounded-lg md:shadow-lg">
           <div className="flex items-start justify-start md:items-center md:justify-center">
